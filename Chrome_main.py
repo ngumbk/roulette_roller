@@ -13,6 +13,7 @@ try:
     while 1:
         if timer.timerstopper(driver, "//*[@id='root']/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[1]/div[1]"):
             # Получаем суммы ставок на каждый цвет
+
             blueBet = driver.find_element(By.XPATH,
                                           "//*[@id='root']/div[1]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/span[2]/span[2]/span")
             yellowBet = driver.find_element(By.XPATH,

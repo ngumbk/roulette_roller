@@ -13,8 +13,9 @@ def timerstopper(driver, path):
             try:
                 _timer = driver.find_element(By.XPATH, path).get_attribute('innerHTML')
                 _timer = float(_timer)
+
                 if type(_timer) == float:
-                    if _timer < 0.05:
+                    if _timer < 0.05:   #тут меняем значени, чтобы установить минимальный предел времени
                         print(_timer)
                         #Когда достигаем необходимого минимума таймера поднимаем флаг
                         flag = True
