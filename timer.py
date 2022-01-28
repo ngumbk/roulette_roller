@@ -6,7 +6,6 @@ import time
 
 
 def timerstopper(driver, path):
-    try:
         _timer = 0.000
         flag = False
         while not flag:
@@ -15,18 +14,15 @@ def timerstopper(driver, path):
                 _timer = float(_timer)
 
                 if type(_timer) == float:
-                    if _timer < 0.05:   #тут меняем значени, чтобы установить минимальный предел времени
-                        print(_timer)
+                    if _timer < 0.2:   #тут меняем значени, чтобы установить минимальный предел времени
+                        print("Time left: ", _timer)
                         #Когда достигаем необходимого минимума таймера поднимаем флаг
                         flag = True
                         return True
                     else:
-                        time.sleep(_timer - 0.5)
+                        time.sleep(_timer - 0.1)
                 else:
                     print(type(_timer))
 
             except Exception as excp:
-                print(excp)
-
-    except Exception as exception:
-        print(exception)
+                time.sleep(1)
