@@ -11,14 +11,6 @@ try:
     timer = 0.000
 
     while 1:
-        try:
-            timer = driver.find_element(By.XPATH,
-                                    "//*[@id='root']/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[1]/div[2]").get_attribute(
-            'innerHTML')
-        except Exception as exept:
-            print("Не удалось получить таймер")
-            continue
-        if timer < 0.25:
             # Получаем суммы ставок на каждый цвет
             blueBet = driver.find_element(By.XPATH,
                                           "//*[@id='root']/div[1]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/span[2]/span[2]/span")
