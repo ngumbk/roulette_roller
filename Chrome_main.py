@@ -27,7 +27,7 @@ def getwin():
                               "//*[@id='root']/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[3]/ul/li[1]/span").get_attribute(
         'class')
     print("Win is", win[21:len(win)])
-    return  win[21:len(win)]
+    return win[21:len(win)]
 
 
 # returns str name of color that should win
@@ -43,8 +43,8 @@ def prediction(_arrayOfBets):
         print("green")
         return "green"
     else:
-        print("yellow")
-        return "yellow"
+        print("orange")
+        return "orange"
 
 
 driver = webdriver.Chrome(executable_path="D:\\Projects\\roulette_roller\\chromedriver\\chromedriver.exe")
@@ -68,7 +68,7 @@ try:
             counter += 1
 
             if predictionBet == winBet:
-                if predictionBet == "yellow":
+                if predictionBet == "orange":
                     currentBalance += 3.25
                 else:
                     currentBalance += 0.25
@@ -76,11 +76,11 @@ try:
                 currentBalance -= 0.25
 
             file.write(
-                f"C:{counter}|B:{round(arrayOfBets[0],2)}|Y:{round(arrayOfBets[1], 2)}|G:{round(arrayOfBets[2])}"
+                f"C:{counter}|B:{round(arrayOfBets[0], 2)}|O:{round(arrayOfBets[1], 2)}|G:{round(arrayOfBets[2])}"
                 f"|P:{predictionBet}|W:{winBet}|BAL:{currentBalance};\n")
 
             print(
-                f"C:{counter}|B:{round(arrayOfBets[0],2)}|Y:{round(arrayOfBets[1], 2)}|G:{round(arrayOfBets[2])}"
+                f"C:{counter}|B:{round(arrayOfBets[0], 2)}|O:{round(arrayOfBets[1], 2)}|G:{round(arrayOfBets[2])}"
                 f"|P:{predictionBet}|W:{winBet}|BAL:{currentBalance};")
 
 except Exception as exception:

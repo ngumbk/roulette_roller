@@ -20,3 +20,9 @@ B/Y/G - amount of bet by colors(Blue, Yellow, Green)
 P - prediction of color
 W - color that won
 BAL - current balance
+
+29.01.2022:
+ Считать статистику:
+    1. Количество побед/пражений
+    2. График баланса
+    3. 
