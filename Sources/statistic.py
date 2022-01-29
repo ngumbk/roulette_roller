@@ -41,5 +41,5 @@ def makeStatistic(name, filename):
     print(f"{name}\nGames: {len(predictions_array)}, true predictions: {wins}. \n Wins/predictions: {wins/len(predictions_array)}\n")
 
 
-makeStatistic("Ставка на меньший", 'newresult_1_bet.txt')
-makeStatistic("Рандом", 'newresult_3_bet.txt')
+makeStatistic("Ставка на меньший", '../Data/newresult_1_bet.txt')
+makeStatistic("Рандом", '../Data/newresult_3_bet.txt')
