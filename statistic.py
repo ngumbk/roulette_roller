@@ -20,4 +20,21 @@ plt.grid()
 plt.plot(time_array, balance_value_array)
 plt.show()
 
-print(balance_value_array, '\n', time_array)
+
+match = re.findall(r'P:\w+\W', line)
+predictions_array = []
+for item in match:
+    predictions_array.append(item[2:len(item) - 1])
+
+match = re.findall(r'W:\w+\W', line)
+colors_won_array = []
+for item in match:
+    colors_won_array.append(item[2:len(item) - 1])
+
+wins = 0
+for index, prediction in enumerate(predictions_array):
+    if prediction == colors_won_array[index]:
+        wins += 1
+
+print(f"Games: {len(predictions_array)}, true predictions: {wins}. \n Wins/predictions: {wins/len(predictions_array)}")
+
