@@ -8,11 +8,12 @@ path: XPath to Timer in driver.fine_element(By.XPATH, <XPath>)
 !!!!После функции всегда испольщовать time.sleep(1), пока не впилим это в функцию
 
 #Comments
-28.01.2022 - 7:24
+28.01.2022 - 7:24 DONE
     Придумать способ хранения собранных ставок и способ извлечения победной ставки.
 Потестить, нормально ли работает метод на 0.05. 
 Найти способ избежать выводов 'Крутится' и 'Игра завершена'
 
+The way of saving data
 C:X|B:X.XX|Y:X.XX|G:X.XX|P:B\Y\G|W:B\Y\G|BAL:X.XX;
 C - count of spins;
 B/Y/G - amount of bet by colors(Blue, Yellow, Green)
