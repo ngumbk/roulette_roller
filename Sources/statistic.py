@@ -8,7 +8,7 @@ def makeStatistic(name, filename):
     line = file.read()
     file.close()
 
-    match = re.findall(r'BAL:\W*\d+.\d+', line)
+    match = re.findall(r'BAL:\W*\d+', line)
     balance_value_array = []
     time_array = []
     for index, item in enumerate(match):
@@ -41,5 +41,7 @@ def makeStatistic(name, filename):
     print(f"{name}\nGames: {len(predictions_array)}, true predictions: {wins}. \n Wins/predictions: {wins/len(predictions_array)}\n")
 
 
-makeStatistic("Ставка на меньший", '../Data/newresult_1_bet.txt')
-makeStatistic("Рандом", '../Data/newresult_3_bet.txt')
+makeStatistic("Ставка на меньший", '../Data/result_1_bet.txt')
+makeStatistic("Рандом", '../Data/result_random_bet.txt')
+
+

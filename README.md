@@ -21,8 +21,5 @@ P - prediction of color
 W - color that won
 BAL - current balance
 
-29.01.2022:
- Считать статистику:
-    1. Количество побед/пражений
-    2. График баланса
-    3. 
+Staticstic.py настроен для работы с resoult_1_bet и resoult_random_bet и директории Data. Для работы с newresoult необходимо изменить
+regexp в 11 строке
